@@ -1,0 +1,52 @@
+# $schema: https://docs.coderabbit.ai/schema/schema.v3.json
+language: en
+reviews:
+  auto_review:
+    description_keyword: ""
+    drafts: true
+    enabled: true
+    incremental_review: true
+    pause_after_reviewed_commits: 5
+  behavior:
+    auto_approvals:
+      allow_author_approval: true
+      approve_on_skipped_review: true
+      enabled: true
+      override_requested_reviewers_only: false
+    code_guidelines:
+      enabled: true
+    profile: assertive
+    status:
+      progress_updates: true
+      fail_on_error: true
+  output:
+    chat:
+      allow_non_org_members: true
+    metadata:
+      labels:
+        instructions: []
+        mode: suggest
+        mutually_exclusive_groups: {}
+      reviewers:
+        instructions: []
+        mode: suggest
+    review_info: true
+    review_details: true
+    summary:
+      instructions: ""
+      placeholder: "@coderabbitai summary"
+      placement: walkthrough
+    walkthrough:
+      changed_files_summary: true
+      collapse: true
+      related_issues: true
+      related_prs: true
+      review_status: true
+  tools:
+    actionlint:
+      enabled: true
+    dotenvLint:
+      enabled: true
+    oxc:
+      enabled: true
+version: 3
